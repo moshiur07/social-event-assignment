@@ -5,6 +5,11 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Root from './Root';
+import Home from './Pages/Home/Home';
+import Login from './Pages/Login/Login';
+import Registration from './Pages/Registration/Registration';
+import Details from './Pages/Details/Details';
 
 
 
@@ -12,9 +17,25 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>
-      <p className='text-2xl font-head'>Magic Light</p>
-      </div>,
+    element: <Root/>,
+    children:[
+      {
+        path:'/',
+        element: <Home/>
+      },
+      {
+        path:'/details',
+        element:<Details/>
+      },
+      {
+        path:'/login',
+        element:<Login/>
+      },
+      {
+        path:'/registration',
+        element:<Registration/>
+      },
+    ]
   },
 ]);
 
