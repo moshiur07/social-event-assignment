@@ -1,0 +1,39 @@
+[
+    {
+      "id": 1,
+      "title": "Search Engine Optimization (SEO)",
+      "description": "Boost your website's visibility and rank higher on search engine results pages. Our comprehensive SEO strategies target relevant keywords and optimize your online presence for maximum organic traffic.",
+      "img": "https://i.ibb.co/4PPtyfs/seo.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Social Media Management",
+      "description": "Engage your audience and build brand loyalty with our strategic social media management services. From content creation to community engagement, we tailor our approach to suit your brand's unique voice and objectives.",
+      "img": "https://i.ibb.co/b1j2XP0/hands-holding-smartphone-social-media-concept-1.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Pay-Per-Click (PPC) Advertising",
+      "description": "Drive targeted traffic to your website and generate leads with our results-driven PPC advertising campaigns. We craft compelling ad copy and optimize ad placements to ensure maximum ROI for your ad spend.",
+      "img": "https://i.ibb.co/RNJKxTf/ppc.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Content Marketing",
+      "description": "Create valuable, relevant, and consistent content to attract and retain your target audience. Our content marketing strategies include blog posts, infographics, videos, and more, designed to establish your brand as an industry authority.",
+      "img": "https://i.ibb.co/cc4JSxx/content-marketing-2.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Email Marketing",
+      "description": "Nurture leads and drive conversions with personalized email marketing campaigns. From welcome emails to newsletters, we craft compelling content and design visually appealing templates to engage your subscribers and boost ROI.",
+      "img": "https://i.ibb.co/gPSBHFW/email.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Website Design and Development",
+      "description": "Create a visually stunning and user-friendly website that captivates visitors and drives conversions. Our expert team combines aesthetics with functionality to deliver responsive websites optimized for SEO and user experience.",
+      "img": "https://i.ibb.co/C5jfqK4/web.jpg"
+    }
+  ]
+  

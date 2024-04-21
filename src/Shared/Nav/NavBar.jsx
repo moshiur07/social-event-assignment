@@ -6,10 +6,10 @@ const NavBar = () => {
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/details'>Details</NavLink></li>
         <li><NavLink to='/login'>Login</NavLink></li>
-        <li><NavLink to='/registration'>Registration</NavLink></li>
+        <li><NavLink to='/registration'>Register</NavLink></li>
     </>
     return (
-        <div className="navbar bg-orange-100 rounded-full  flex justify-between   ">
+        <div className="navbar bg-base-200 shadow-lg rounded-full  flex justify-between   ">
             <div className="">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -19,7 +19,7 @@ const NavBar = () => {
                         {navLinks}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">Event Organizer</a>
+                <a className="btn btn-ghost text-xl">Digital Agency</a>
             </div>
             <div className="navbar-center hidden lg:flex ">
                 <ul className="menu menu-horizontal px-1">
