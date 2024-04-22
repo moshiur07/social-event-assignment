@@ -24,15 +24,15 @@ const Home = () => {
                 <h1 className="my-8 text-center text-4xl font-bold ">Our Services</h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8 w-[80%] mx-auto">
                     {
-                        allServices.map(service => <>
+                        allServices.map(service => <div key={service.id}>
                             <div className="card card-compact  bg-base-100 shadow-xl">
                                 <figure><img src={service.img} alt="Shoes" className="w-full h-[200px]" /></figure>
                                 <div className="card-body">
                                     <h2 className="card-title">{service.title}</h2>
-                                    <p>{service?.description?.length>90 && service.description.slice(0,90)}...<Link className="inline-flex items-center gap-1 text-blue-800 font-semibold" to='/'>View Details <LuExternalLink /></Link></p>
+                                    <p>{service?.description?.length>90 && service.description.slice(0,90)}...<Link className="inline-flex items-center gap-1 text-blue-800 font-semibold" to={`/details/${service.id}`}>View Details <LuExternalLink /></Link></p>
                                 </div>
                             </div>
-                        </>)
+                        </div>)
                     }
                 </div>
             </div>

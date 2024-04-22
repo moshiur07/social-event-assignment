@@ -1,8 +1,33 @@
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import toast, { Toaster } from "react-hot-toast";
+import { Link, useLocation, useNavigate} from "react-router-dom";
+import { AuthContext } from "../../Auth/AuthProvider";
 
 const Login = () => {
+
+    const {Login}=useContext(AuthContext)
+    const navigate= useNavigate()
+    const location = useLocation()
+
+    const handleLogin= e =>{
+        e.preventDefault()
+        const form = new FormData(e.currentTarget)
+        const email = form.get('email')
+        const password = form.get('password')
+        console.log(email,password);
+
+        Login(email,password)
+        .then(res => {
+            toast.success('Successfully Logged In!');
+            navigate(location?.state ? location.state : '/')
+            console.log(res.user)
+        })
+        .catch(error => toast.error(error) )
+    }
+
     return (
         <div>
+            <Toaster/>
             <section className=" dark:bg-gray-900">
                 <div className="flex  flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
                     <div className="w-full border bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
@@ -10,7 +35,7 @@ const Login = () => {
                             <h1 className="text-xl text-center mb-5 font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                                 Login to your Account!
                             </h1>
-                            <form className="space-y-4  md:space-y-6" action="#">
+                            <form onSubmit={handleLogin} className="space-y-4  md:space-y-6" action="#">
                                 
                                 <div>
                                     <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
