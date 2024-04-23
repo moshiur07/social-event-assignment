@@ -12,6 +12,8 @@ import Registration from './Pages/Registration/Registration';
 import Details from './Pages/Details/Details';
 import AuthProvider from './Auth/AuthProvider';
 import PrivateRoute from './Private/PrivateRoute';
+import About from './Pages/About/About';
+import Errorpage from './Pages/Error/Errorpage';
 
 
 
@@ -19,6 +21,7 @@ import PrivateRoute from './Private/PrivateRoute';
 const router = createBrowserRouter([
   {
     path: "/",
+    errorElement: <Errorpage/> ,
     element: <Root />,
     children: [
       {
@@ -28,7 +31,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/about',
-        element: <Home />
+        element: <About/>
       },
       {
         path: '/details/:id',
